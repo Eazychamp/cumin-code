@@ -1,0 +1,39 @@
+/* app/globals.css */
+
+@import "tailwindcss";
+
+/* Monaco Editor fixes */
+.monaco-editor {
+  --vscode-editor-background: theme('colors.white');
+}
+
+.dark .monaco-editor {
+  --vscode-editor-background: theme('colors.gray.800');
+}
+
+.monaco-editor .margin {
+  background-color: transparent !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.gray.100');
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: theme('colors.gray.800');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.300');
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.600');
+}
