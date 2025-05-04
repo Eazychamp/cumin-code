@@ -3,7 +3,7 @@
 import { useMonaco } from "../hooks/useMonaco";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Monaco, MonacoCompletionItem } from "../types/compiler";
-import MonacoEditor from "@monaco-editor/react";
+import Editor from "@monaco-editor/react";
 import * as monacoEditor from "monaco-editor";
 import * as monaco from "monaco-editor";
 // import { useDebounce } from "../hooks/useDebounce";
@@ -114,7 +114,7 @@ export function EditorPane({
   return (
       <div className="h-full border border-gray-200 rounded-lg overflow-hidden dark:border-gray-700">
         {monaco ? (
-          <MonacoEditor
+          <Editor
             height="93%"
             defaultLanguage="javascript"
             theme={isDarkMode ? "vs-dark" : "light"}
