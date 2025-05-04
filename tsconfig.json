@@ -18,9 +18,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "@monaco-editor/react/global"
-    ],
+    "types": [],
+    "paths": {
+      "@monaco-editor/react": ["./node_modules/@monaco-editor/react"]
+    },
     "plugins": [
       {
         "name": "next"
