@@ -51,7 +51,7 @@ export const ConsoleOutput = memo(({ logs, clearLogs }: ConsoleOutputProps) => {
           <div className="text-gray-500 dark:text-gray-400">No logs yet</div>
         ) : (
           logs.map((log, index) => (
-            <LogItem key={`${log.timestamp.getTime()}-${index}`} log={log} />
+            <LogItem key={`${new Date(log.timestamp).toISOString()}-${index}`} log={log} />
           ))
         )}
         <div ref={endRef} />
