@@ -30,6 +30,19 @@ export default function JavaScriptCompiler() {
   const [consoleWidth, setConsoleWidth] = useState(384); // Default width in pixels
   const [isResizing, setIsResizing] = useState(false);
 
+  // Load tabs from localStorage on initial render
+  useEffect(() => {
+    const savedTabs = localStorage.getItem("tabs");
+    if (savedTabs) {
+      setTabs(JSON.parse(savedTabs));
+    }
+  }, []);
+
+  // Save tabs to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("tabs", JSON.stringify(tabs));
+  }, [tabs]);
+
   // Set first tab as active on initial load
   useEffect(() => {
     if (tabs.length > 0 && !activeTabId) {
